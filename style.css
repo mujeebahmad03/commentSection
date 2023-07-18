@@ -53,17 +53,17 @@ input[type="text"]:focus {
   padding: 30px;
 }
 
-/* invite form */
 #commentForm {
   position: relative;
   margin: 0 0 20px;
-  display: flex;
+  /* display: flex; */
   background: #edeef0;
-  border-radius: 40px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 #commentForm input {
-  flex: 1;
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
@@ -77,7 +77,7 @@ input[type="text"]:focus {
   background: #ff5945;
   color: #fff;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 #commentForm button:hover {
