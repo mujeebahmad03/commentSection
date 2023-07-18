@@ -1,0 +1,169 @@
+/* general */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Poppins", sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  min-height: 100vh;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus,
+input[type="text"]:focus {
+  outline: none;
+}
+
+.comment {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+/* header */
+#header {
+  padding: 20px 30px;
+  border-radius: 5px 5px 0 0;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #002765;
+}
+
+/* main */
+.main {
+  padding: 30px;
+}
+
+/* invite form */
+#commentForm {
+  position: relative;
+  margin: 0 0 20px;
+  display: flex;
+  background: #edeef0;
+  border-radius: 40px;
+}
+
+#commentForm input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 20px;
+}
+
+#commentForm button {
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  background: #ff5945;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+#commentForm button:hover {
+  opacity: 0.7;
+}
+
+#commentList li {
+  padding: 20px;
+  margin: 0 0 10px;
+}
+
+#commentList li span,
+#commentList li input[type="text"] {
+  margin: 0 0 5px;
+  display: block;
+}
+#commentList .username {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#commentList .timer {
+  font-size: 12px;
+}
+
+#commentList li input[type="text"] {
+  border: 1px solid #eee;
+  padding: 10px 100px 10px 10px;
+  width: 100%;
+  height: 50px;
+  color: #333;
+}
+
+#commentList li button {
+  font-size: 14px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  background: #70b3ff;
+  border: 0;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+#commentList li button:last-child {
+  background: #ff7f7f;
+}
+
+#commentList li button:hover {
+  opacity: 0.7;
+}
+
+#filterSelect {
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 840px) {
+  .comment {
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body,
+  #commentForm input,
+  #commentForm button {
+    font-size: 14px;
+  }
+
+  #header h1 {
+    font-size: 20px;
+  }
+
+  #commentList li span,
+  #commentList li input[type="text"] {
+    font-size: 16px;
+  }
+
+  #commentList li button {
+    font-size: 12px;
+  }
+}

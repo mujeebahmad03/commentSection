@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comment Section</title>
+    <!-- custom css -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="comment">
+        <header id="header">
+          <h1>Comments</h1>
+        </header>
+        <main class="main">
+            <form id="commentForm">
+                <input type="text" id="username" placeholder="Your Username" required />
+                <input type="text" id="comment" placeholder="Enter your comment here..." required />
+                <button type="submit" name="submit" value="submit">Send</button>
+              </form>              
+          <div>
+            <label for="filterSelect">Order:</label>
+            <select id="filterSelect">
+              <option value="default">Default</option>
+              <option value="newestFirst">Newest First</option>
+              <option value="oldestFirst">Oldest First</option>
+            </select>
+          </div>
+
+          <ul id="commentList"></ul>
+        </main>
+      </div>
+    <!-- custom js -->
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
