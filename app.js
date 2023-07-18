@@ -84,11 +84,18 @@ commentList.addEventListener('click', (event) => {
             saveData();
         } else if (button.textContent === 'save') {
             const input = li.querySelector('.comment-input');
+            const date = new Date();
+            li.setAttribute('data-timestamp', date.getTime());
             const commentText = document.createElement('span');
             commentText.textContent = input.value;
             commentText.className = 'comment-text';
             li.insertBefore(commentText, input);
             li.removeChild(input);
+            const timestamp = li.querySelector('.timer')
+            const timestampText = document.createTextNode(`${date.toLocaleString()}`);
+            timestamp.textContent = '';
+            timestamp.appendChild(timestampText);
+            ul.insertBefore(li, ul.firstChild);
             button.textContent = 'edit';
             saveData();
         }
